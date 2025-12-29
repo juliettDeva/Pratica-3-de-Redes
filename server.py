@@ -1,4 +1,6 @@
 import socket # acesso a funções de socket
+import sys
+
 def server(name):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #criou objeto socket
     server_address = ('127.0.0.1', 5000) #socket precisa desta tupla
@@ -33,4 +35,5 @@ def server(name):
     s.close()
 
 if __name__ == '__main__':
-    server('Juliett')
+    user_name = sys.argv[1]
+    server(user_name)

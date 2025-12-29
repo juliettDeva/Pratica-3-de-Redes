@@ -1,4 +1,5 @@
 import socket #acesso as funções deste módulo
+import sys
 
 def client(name):
 
@@ -25,4 +26,5 @@ def client(name):
     novo_socket.close() #encerra canal de comunicação
 
 if __name__== '__main__':
-    client('Amora')
+    user_name = sys.argv[1]
+    client(user_name)
