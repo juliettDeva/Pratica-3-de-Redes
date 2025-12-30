@@ -4,12 +4,15 @@ import json
 #Dados do usuario em formato de dicionario
 
 usuario = {
-    'nome': 'Amora',
-    'idade' : 7,
-    'email' : 'amora@example.com'
+    'user': None,
+    'data' : None,
+    
 }
 
-# converter dicionario em JSON
+usuario['user'] = input('Digite nome de usuario: ')
+usuario['data'] = input('Digite mensagem a ser enviada: ')
+
+# converter dicionario em string JSON
 
 usuario_json = json.dumps(usuario)
 
